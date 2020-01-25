@@ -2,6 +2,10 @@ def detect_faces(path):
     """Detects faces in an image."""
     from google.cloud import vision
     import io
+    import os
+
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="./credentials/amuseme-1f7ad05f1c58.json"
+
     client = vision.ImageAnnotatorClient()
 
     with io.open(path, 'rb') as image_file:
@@ -21,12 +25,13 @@ def detect_faces(path):
         print('anger: {}'.format(likelihood_name[face.anger_likelihood]))
         print('joy: {}'.format(likelihood_name[face.joy_likelihood]))
         print('surprise: {}'.format(likelihood_name[face.surprise_likelihood]))
+        print('sorrow: {}'.format(likelihood_name[face.sorrow_likelihood]))
 
         vertices = (['({},{})'.format(vertex.x, vertex.y)
                     for vertex in face.bounding_poly.vertices])
 
         print('face bounds: {}'.format(','.join(vertices)))
-
+    # print(faces)
     if response.error.message:
         raise Exception(
             '{}\nFor more info on error messages, check: '
@@ -34,4 +39,4 @@ def detect_faces(path):
                 response.error.message))
 
 
-detect_faces('./resources/test.jpg')
+detect_faces('./resources/test9.jpg')
