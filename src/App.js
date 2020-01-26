@@ -8,6 +8,7 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import WebcamCapture from "./webcam.js";
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
               <SkipNextIcon />
             </Button>
           </ButtonGroup>
+          <WebcamCapture/>
         </div>
       </Container>
     );
