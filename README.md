@@ -1,5 +1,8 @@
 # aMuseMe
 
-## Developers
+Music player that plays songs depending on your emotions
 
-Si ca fonctionne pas reveille moi pas et download tout les dependencies que ta besoin pour run le app. Bande de connanse.
+## How it works
+
+Simply press Play music while facing the webcam. 
+The app will use Google Cloud Vision api to get your emotions and from that play a song using Octave Groups api
