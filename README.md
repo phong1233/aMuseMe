@@ -1,6 +1,6 @@
 # aMuseMe
 
-aMuseMe.ai is a revolutionary music players that plays musics based on your emotions.
+aMuseMe.ai is a revolutionary music player that plays musics based on your emotions.
 
 ## How it works
 
